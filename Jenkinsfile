@@ -23,7 +23,7 @@ pipeline {
     always {
         emailext body: 'A Test EMail',
           subject: 'sucess' 
-      recipientProviders: 'anil.tammali1987@gmail.com
+      recipientProviders: 'anil.tammali1987@gmail.com'
     }
 }
 }
