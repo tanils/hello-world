@@ -17,13 +17,15 @@ pipeline {
       }
     }
   
-    stage('mail'){
-      steps{
-        mail bcc: 'anil.tammali198703@gmail.com', body: 'build success', cc: 'anil.tammali198703@gmail.com', from: '', replyTo: '', subject: 'build sucess', to: 'anil.tammali198703@gmail.com'
-      }
-      }
-  
+     
   }
+  post {
+    always {
+        emailext body: 'A Test EMail',
+          subject: 'sucess' 
+      recipientProviders: 'anil.tammali1987@gmail.com
+    }
+}
 }
   
 
