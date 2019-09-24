@@ -20,11 +20,9 @@ pipeline {
      
   }
   post {
-    always {
-        emailext body: 'A Test EMail',
-          subject: 'sucess' 
-      recipientProviders: 'anil.tammali1987@gmail.com'
-    }
+
+        mail bcc: '', body: 'sucess', cc: '', from: '', replyTo: '', subject: 'hi', to: 'anil.tammali1987@gmail.com'
+  
 }
 }
   
