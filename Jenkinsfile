@@ -16,7 +16,13 @@ pipeline {
         sh 'mvn clean compile test package'
       }
     }
-  }
+  
+    stage('mail'){
+      steps{
+        mail bcc: '', body: 'build success', cc: '', from: '', replyTo: '', subject: '', to: 'anil.tammali1987@gmail.com'
+      }
+      }
+  
   }
   
 
