@@ -9,7 +9,7 @@ pipeline {
     }
   stage('Compile') { // Compile and do unit testing
       tools {
-        Maven'Maven3.6.2'
+        Maven 'Maven3.6.2'
       }
       steps {
         // run Gradle to execute compile and unit testing
