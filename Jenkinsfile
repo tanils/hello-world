@@ -19,7 +19,7 @@ pipeline {
   
     stage('mail'){
       steps{
-        mail bcc: '', body: 'build success', cc: '', from: '', replyTo: '', subject: '', to: 'anil.tammali1987@gmail.com'
+        mail bcc: 'anil.tammali198703@gmail.com', body: 'build success', cc: 'anil.tammali198703@gmail.com', from: '', replyTo: '', subject: 'build sucess', to: 'anil.tammali198703@gmail.com'
       }
       }
   
