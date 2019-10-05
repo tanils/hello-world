@@ -1,0 +1,24 @@
+node {
+	//def mvnHome
+	stage('getscm'){
+	git 'https://github.com/tanils/hello-world.git'
+	//credentialsId: '7fd0a487-0bc5-4603-96ed-919345d56860'
+	//mvnHome = tool 'Maven'
+	}
+	stage('build'){
+	sh 'mvn clean test package'
+		}
+		stage('artifact')
+		{
+		archive 'target/*.war'
+		}
+		stage ('deploy')
+		{
+		sh '''cp /root/.jenkins/workspace/fourth_pipeline/webapp/target/*.war /home/sandhya/testbam/'''
+		}
+}
+	
+	
+	
+		
+		
